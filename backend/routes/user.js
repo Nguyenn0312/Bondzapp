@@ -45,7 +45,7 @@ router.patch("/:id", authOnlyMiddleware(["admin"]), async (req, res) => {
 	}
 });
 //upload the profile picture
-const uploadDir = path.join(__dirname, '..', 'uploads', 'profilePic', );
+const uploadDir = path.join(__dirname, '../uploads/profilePic/' );
 router.post("/upload-avatar", authOnlyMiddleware([]), async (req, res) => {
     try {
         const acceptedExtensions = ['.txt', '.png', '.jpg'];
